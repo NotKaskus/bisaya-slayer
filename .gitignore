@@ -1,0 +1,32 @@
+## Builds ##
+dist/
+
+## Development ##
+infra/
+coverage/
+k8s/result.yml
+
+## Dependencies ##
+node_modules/
+
+## Package Manager Lock Files ##
+package-lock.json
+bun.lockb
+
+## IDEs ##
+.idea/
+
+## Env ##
+.env
+
+## Turbo ##
+.turbo/
+
+## Package manager ##
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

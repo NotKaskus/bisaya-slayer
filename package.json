@@ -1,0 +1,55 @@
+{
+  "name": "bisaya-snitch",
+  "version": "0.0.1",
+  "author": "@NotKaskus",
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@kbotdev/prettier-config": "^1.0.2",
+    "@kbotdev/ts-config": "^1.0.2",
+    "@swc/core": "^1.3.102",
+    "@types/bun": "latest",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "8.56.0",
+    "eslint-config-turbo": "^1.11.3",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.1",
+    "schemix": "^1.14.1",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "engines": {
+    "node": ">=20.x"
+  },
+  "lint-staged": {
+    "*.{mjs,cjs,js,ts}": [
+      "eslint --fix --ext js,ts",
+      "prettier --write --log-level=warn \"**/*.{mjs,cjs,js,ts}\""
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --write --log-level=warn \"**/*.{json,yml,yaml,md}\""
+    ],
+    "*.prisma": [
+      "prisma format"
+    ]
+  },
+  "private": true,
+  "scripts": {
+    "update": "bun upgrade"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
+}

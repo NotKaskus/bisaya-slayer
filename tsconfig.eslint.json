@@ -1,0 +1,12 @@
+{
+	"extends": "",
+	"compilerOptions": {
+		"noEmit": true
+	},
+	"include": [
+		"apps/**/*.ts",
+		"scripts/*.ts",
+		".eslintrc.cjs",
+		".lintstagedrc.cjs",
+	]
+}
